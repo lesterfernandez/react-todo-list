@@ -12,7 +12,7 @@ function App() {
     <StyledApp>
       <StyledTitle>Todo List</StyledTitle>
       <Input text={text} setText={setText} todos={todos} setTodos={setTodos} />
-      <List todos={todos} />
+      <List todos={todos} setTodos={setTodos} />
     </StyledApp>
   );
 }

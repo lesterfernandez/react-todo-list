@@ -3,11 +3,26 @@ import StyledList from "./styled/List.styled";
 
 const List = ({ todos, ...props }) => {
   const deleteTodo = e => {
+    let element = null;
     if (e.target.classList.contains("fas")) {
-      e.target.parentElement.parentElement.remove();
+      element = e.target.parentElement.parentElement;
     } else {
-      e.target.parentElement.remove();
+      element = e.target.parentElement;
     }
+    element.classList.add("done");
+    setTimeout(() => {
+      element.remove();
+    }, 700);
+  };
+
+  const completeTodo = e => {
+    let main = null;
+    if (e.target.classList.contains("fas")) {
+      main = e.target.parentElement.parentElement;
+    } else {
+      main = e.target.parentElement;
+    }
+    main.classList.toggle("complete");
   };
 
   return (
@@ -15,7 +30,7 @@ const List = ({ todos, ...props }) => {
       {todos.map(e => (
         <li>
           <p>{e}</p>
-          <Button btnType="check" bg="#2f2" />
+          <Button btnType="check" bg="#2f2" action={completeTodo} />
           <Button btnType="ban" action={deleteTodo} bg="red" />
         </li>
       ))}

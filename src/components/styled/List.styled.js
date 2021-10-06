@@ -23,12 +23,30 @@ const List = styled.ul`
     p {
       flex: 1;
       font-size: 1.4rem;
-      padding-left: 10px;
+      padding-inline: 10px;
       text-overflow: hidden;
       overflow: hidden;
     }
     button:first-child {
       margin-left: auto;
+    }
+  }
+
+  li.complete {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+
+  li.done {
+    animation: fall 0.7s ease-out forwards;
+  }
+
+  @keyframes fall {
+    0% {
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(90px) rotate(15deg);
     }
   }
 `;
