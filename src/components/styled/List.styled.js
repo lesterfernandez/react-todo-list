@@ -6,7 +6,8 @@ const List = styled.ul`
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  min-width: 30%;
+  max-width: 80%;
   align-self: flex-start;
   gap: 1rem;
   margin-bottom: 5rem;
