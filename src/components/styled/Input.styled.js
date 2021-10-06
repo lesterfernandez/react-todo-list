@@ -5,6 +5,7 @@ const Input = styled.form`
   max-width: 700px;
   display: flex;
   justify-content: center;
+  align-self: end;
 
   input {
     border: 0;

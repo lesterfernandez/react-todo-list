@@ -20,7 +20,7 @@ const Input = ({ todos, setTodos, ...props }) => {
         }}
         className="input"
       />
-      <Button btnType="check" action={resetText} type="submit" />
+      <Button btnType="plus" action={resetText} type="submit" />
     </StyledInput>
   );
 };
