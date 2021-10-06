@@ -15,8 +15,8 @@ const List = ({ todos, ...props }) => {
       {todos.map(e => (
         <li>
           <p>{e}</p>
-          <Button btnType="check" />
-          <Button btnType="ban" action={deleteTodo} />
+          <Button btnType="check" bg="#2f2" />
+          <Button btnType="ban" action={deleteTodo} bg="red" />
         </li>
       ))}
     </StyledList>
